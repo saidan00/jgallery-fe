@@ -1,7 +1,7 @@
 <template>
   <header class="header-bar d-flex d-lg-block align-items-center">
     <div class="site-logo">
-      <a href="#/">Shutter</a>
+      <a href="/">Shutter</a>
     </div>
 
     <div
@@ -19,33 +19,7 @@
           <router-link to="/">Home</router-link>
         </li>
         <li>
-          <a href="photos.html">Photos</a>
-        </li>
-        <li>
-          <a href="bio.html">Bio</a>
-        </li>
-        <li>
-          <a href="blog.html">Blog</a>
-        </li>
-        <li>
-          <router-link to="/about">Contact</router-link>
-        </li>
-      </ul>
-      <ul class="social js-clone-nav">
-        <li>
-          <a href="#">
-            <span class="icon-facebook"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon-twitter"></span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon-instagram"></span>
-          </a>
+          <router-link to="/about">About</router-link>
         </li>
       </ul>
     </div>
