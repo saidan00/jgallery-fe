@@ -1,0 +1,66 @@
+<template>
+  <header class="header-bar d-flex d-lg-block align-items-center">
+    <div class="site-logo">
+      <a href="#/">Shutter</a>
+    </div>
+
+    <div
+      class="d-inline-block d-lg-none ml-md-0 ml-auto py-3"
+      style="position: relative; top: 3px;"
+    >
+      <a href="#" class="site-menu-toggle js-menu-toggle text-white">
+        <span class="icon-menu h3"></span>
+      </a>
+    </div>
+
+    <div class="main-menu">
+      <ul class="js-clone-nav">
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <a href="photos.html">Photos</a>
+        </li>
+        <li>
+          <a href="bio.html">Bio</a>
+        </li>
+        <li>
+          <a href="blog.html">Blog</a>
+        </li>
+        <li>
+          <router-link to="/about">Contact</router-link>
+        </li>
+      </ul>
+      <ul class="social js-clone-nav">
+        <li>
+          <a href="#">
+            <span class="icon-facebook"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon-twitter"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="icon-instagram"></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+</template>
+
+<script>
+export default {
+  name: "Navbar"
+};
+</script>
+
+<style scoped>
+a:hover,
+.router-link-exact-active {
+  color: #ef6c57;
+}
+</style>
