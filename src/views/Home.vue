@@ -1,35 +1,42 @@
 <template>
   <div class="row align-items-stretch">
+    <Loader v-if="isLoading" />
     <div
       class="col-6 col-md-6 col-lg-4"
       data-aos="fade-up"
-      v-for="picture in allPictures"
-      :key="picture.id"
+      v-for="album in albums"
+      :key="album.id"
+      v-else
     >
-      <a :href="picture.imgLink" class="d-block photo-item">
-        <img :src="picture.imgLink" alt="Image" class="img-fluid" />
+      <router-link :to="{path: '/album/' + album.id}" class="d-block photo-item">
+        <img :src="album.coverImgLink" alt="Image" class="img-fluid" />
         <div class="photo-text-more">
           <div class="photo-text-more">
-            <h3 class="heading">{{ picture.title }}</h3>
-            <span class="meta">42 Photos</span>
+            <h3 class="heading">{{ album.title }}</h3>
+            <span class="meta">{{ album.pictures_count }} pictures</span>
           </div>
         </div>
-      </a>
+      </router-link>
     </div>
   </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from "vuex";
+import Loader from "@/components/common/Loader";
 
 export default {
   name: "Home",
-  methods: mapActions(["fetchPictures"]),
-  computed: mapGetters(["allPictures"]),
-  created() {
-    this.fetchPictures();
+  components: {
+    Loader
   },
-  mounted() {},
-  destroyed() {}
+  methods: mapActions(["fetchAlbums"]),
+  computed: mapGetters({
+    albums: "getAllAlbums",
+    isLoading: "getIsLoadding"
+  }),
+  created() {
+    this.fetchAlbums();
+  }
 };
 </script>
