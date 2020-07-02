@@ -31,7 +31,6 @@
 <script>
 import { mapGetters, mapActions } from "vuex";
 import Loader from "@/components/common/Loader";
-// import { colArr } from "@/assets/config.js";
 
 export default {
   name: "Album",
@@ -41,26 +40,12 @@ export default {
   },
   methods: {
     ...mapActions(["fetchAlbum"])
-    // getCol() {
-    // let col = colArr.shift();
-    // colArr.push(col);
-    // let col = 4;
-    // if (count === colArr.length) {
-    //   count = 0;
-    //   console.log("end of array");
-    // }
-    // console.log(count);
-    //   return col;
-    // }
   },
   computed: {
     ...mapGetters({
       album: "getAlbum",
       isLoading: "getIsLoadding"
     })
-  },
-  beforeCreate() {
-    // console.log("before create " + colArr);
   },
   created() {
     this.fetchAlbum(this.id);
@@ -81,7 +66,6 @@ export default {
 
     let count = 0;
     let pictureElements = document.getElementsByClassName("col-6 col-md-6");
-    // console.log(pictureElements);
     pictureElements.forEach(picture => {
       let col = colArr[count];
       count++;
@@ -91,13 +75,7 @@ export default {
       if (count === colArr.length) {
         count = 0;
       }
-
-      // console.log(picture);
     });
-  },
-  beforeDestroy() {
-    // colArr = [3, 6, 3, 8, 4, 6, 6, 4, 4, 4, 3, 6, 3, 8, 4, 6, 6, 4, 8];
-    // console.log("before destroy " + colArr);
   }
 };
 </script>
