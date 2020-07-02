@@ -19,8 +19,6 @@ const actions = {
   },
   async fetchAlbum({ commit }, id) {
     const response = await axios.get(API_URL + '/albums/' + id);
-    console.log(id);
-    console.log(response.data.data);
     commit('setAlbum', response.data.data);
   }
 };

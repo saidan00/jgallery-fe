@@ -53,21 +53,7 @@ export default {
 </script>
 
 <style>
-/* @import "https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900";
-@import "./assets/fonts/icomoon/style.css";
-
-@import "./assets/css/bootstrap.min.css";
-@import "./assets/css/magnific-popup.css";
-@import "./assets/css/jquery-ui.css";
-@import "./assets/css/owl.carousel.min.css";
-@import "./assets/css/owl.theme.default.min.css";
-
-@import "./assets/css/bootstrap-datepicker.css";
-
-@import "./assets/fonts/flaticon/font/flaticon.css";
-
-@import "./assets/css/aos.css";
-@import "./assets/css/fancybox.min.css";
-
-@import "./assets/css/style.css"; */
+a {
+  outline: none;
+}
 </style>
