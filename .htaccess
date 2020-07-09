@@ -1,8 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /jgallery-fe/
-  RewriteRule ^jgallery-fe/index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule . /jgallery-fe/index.html [L]
-</IfModule>
