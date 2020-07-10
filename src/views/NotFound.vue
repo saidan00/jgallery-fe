@@ -19,8 +19,7 @@ export default {
 <style scoped>
 #notfound {
   position: relative;
-  height: 100vh;
-  background: #030005;
+  height: 70vh;
 }
 
 #notfound .notfound {
