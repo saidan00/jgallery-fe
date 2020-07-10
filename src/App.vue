@@ -4,9 +4,11 @@
     <Navbar />
     <main class="main-content">
       <div class="container-fluid photos">
-        <router-view />
-        <Footer />
+        <div class="my-content">
+          <router-view />
+        </div>
       </div>
+      <Footer />
     </main>
   </div>
 </template>
@@ -55,5 +57,8 @@ export default {
 <style>
 a {
   outline: none;
+}
+.my-content {
+  padding-bottom: 140px;
 }
 </style>

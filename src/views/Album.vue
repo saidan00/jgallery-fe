@@ -19,7 +19,7 @@
           <a :href="picture.imgLink" class="d-block photo-item" data-fancybox="gallery">
             <img :src="picture.imgLink" alt="Image" class="img-fluid" />
             <div class="photo-text-more">
-              <span class="icon icon-search"></span>
+              <span>{{ picture.title }}</span>
             </div>
           </a>
         </div>
@@ -92,5 +92,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>
