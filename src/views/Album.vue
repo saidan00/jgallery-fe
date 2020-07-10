@@ -57,10 +57,8 @@ export default {
     let choose = Math.floor(Math.random() * (max - min + 1)) + min;
 
     if (choose === 1) {
-      console.log(1);
       colArr = [3, 6, 3, 8, 4, 6, 6, 4, 4, 4, 3, 6, 3, 8, 4, 6, 6, 4, 8];
     } else {
-      console.log(2);
       colArr = [8, 4, 3, 6, 3, 6, 6, 4, 4, 4, 3, 6, 3, 8, 4, 6, 6, 4, 8];
     }
 

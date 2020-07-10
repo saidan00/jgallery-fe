@@ -1,7 +1,7 @@
 <template>
   <header class="header-bar d-flex d-lg-block align-items-center">
     <div class="site-logo">
-      <a href="/">Shutter</a>
+      <router-link to="/">JGallery</router-link>
     </div>
 
     <div

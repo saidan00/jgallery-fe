@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
+import Home from '../views/Home';
+import NotFound from '../views/NotFound';
 
 Vue.use(VueRouter);
 
@@ -19,20 +20,27 @@ const routes = [{
   path: '/album/:id',
   name: 'Album',
   props: true,
-  component: () => import('../views/Album.vue')
+  component: () => import('../views/Album.vue'),
+}, {
+  path: '/404',
+  alias: '*',
+  component: NotFound
+}, {
+  path: '*',
+  redirect: '/404'
 }
 ];
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history',
+  base: process.env.NODE_ENV === 'production' ? '/jgallery-fe/' : '/',
   routes
 });
 
 router.beforeEach((to, from, next) => {
-  // NProgress.start()
-  // console.log('before');
-  next()
+  next();
 })
+
 router.afterEach(() => {
   // NProgress.done()
   // setTimeout(() => console.log('after'), 1500); // timeout for demo purposes;
