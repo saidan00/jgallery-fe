@@ -64,9 +64,23 @@ export default {
 
     let count = 0;
     let pictureElements = document.getElementsByClassName("col-6 col-md-6");
+
     pictureElements.forEach(picture => {
       let col = colArr[count];
       count++;
+
+      if (picture.classList.contains("col-lg-3")) {
+        picture.classList.remove("col-lg-3");
+      }
+      if (picture.classList.contains("col-lg-4")) {
+        picture.classList.remove("col-lg-4");
+      }
+      if (picture.classList.contains("col-lg-6")) {
+        picture.classList.remove("col-lg-6");
+      }
+      if (picture.classList.contains("col-lg-8")) {
+        picture.classList.remove("col-lg-8");
+      }
 
       picture.classList.add("col-lg-" + col);
 

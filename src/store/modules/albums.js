@@ -20,7 +20,6 @@ const actions = {
   async fetchAlbum({ commit }, id) {
     const response = await axios.get(API_URL + '/albums.json');
     let album = response.data.data.find(anAlbum => anAlbum.id == id) || [];
-    console.log(album);
     if (album.length == 0) {
       router.push({ path: '/404' });
     }
