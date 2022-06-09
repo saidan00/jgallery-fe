@@ -16,8 +16,8 @@
           v-for="picture in album.pictures"
           :key="picture.id"
         >
-          <a :href="picture.imgLink" class="d-block photo-item" data-fancybox="gallery">
-            <img :src="picture.imgLink" alt="Image" class="img-fluid" />
+          <a :href="picture.img_link" class="d-block photo-item" data-fancybox="gallery">
+            <img :src="picture.img_link" alt="Image" class="img-fluid" />
             <div class="photo-text-more">
               <span>{{ picture.title }}</span>
             </div>

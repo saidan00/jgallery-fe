@@ -15,11 +15,12 @@ const getters = {
 const actions = {
   async fetchAlbums({ commit }) {
     const response = await axios.get(API_URL + '/albums.json');
-    commit('setAlbums', response.data.data);
+    console.log(response);
+    commit('setAlbums', response.data);
   },
   async fetchAlbum({ commit }, id) {
     const response = await axios.get(API_URL + '/albums.json');
-    let album = response.data.data.find(anAlbum => anAlbum.id == id) || [];
+    let album = response.data.find(anAlbum => anAlbum.id == id) || [];
     if (album.length == 0) {
       router.push({ path: '/404' });
     }

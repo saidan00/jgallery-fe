@@ -9,7 +9,7 @@
       v-else
     >
       <router-link :to="{path: '/album/' + album.id}" class="d-block photo-item">
-        <img :src="album.coverImgLink" alt="Image" class="img-fluid" />
+        <img :src="album.cover_img_link" alt="Image" class="img-fluid" />
         <div class="photo-text-more">
           <div class="photo-text-more">
             <h3 class="heading">{{ album.title }}</h3>
