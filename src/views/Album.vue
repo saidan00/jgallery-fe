@@ -4,8 +4,8 @@
     <template v-else>
       <div class="row pt-4 mb-5 text-center mx-auto">
         <div class="col-12">
-          <h2 class="text-white">'{{ album.title }}'</h2>
-          <h2 class="text-white mb-4" v-if="album.pictures">{{ album.pictures.length }} Pictures</h2>
+          <h2 class="text-white">{{ album.title }}</h2>
+          <h2 class="text-white mb-4" v-if="album.pictures">{{ album.pictures_count }} Pictures</h2>
         </div>
       </div>
 

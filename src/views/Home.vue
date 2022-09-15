@@ -4,11 +4,11 @@
     <div
       class="col-6 col-md-6 col-lg-4"
       data-aos="fade-up"
-      v-for="album in albums"
-      :key="album.id"
+      v-for="(album, albumKey) in albums"
+      :key="albumKey"
       v-else
     >
-      <router-link :to="{path: '/album/' + album.id}" class="d-block photo-item">
+      <router-link :to="{path: '/album/' + albumKey}" class="d-block photo-item">
         <img :src="album.cover_img_link" alt="Image" class="img-fluid" />
         <div class="photo-text-more">
           <div class="photo-text-more">
